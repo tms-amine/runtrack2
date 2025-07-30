@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url("https://www.google.com/imgres?q=fond%20blanc&imgurl=https%3A%2F%2Fstatic.vecteezy.com%2Fti%2Fvecteur-libre%2Ft2%2F11020176-texture-de-luxe-douce-moderne-vague-blanche-et-gris-clair-abstraite-avec-fond-de-vecteur-lisse-et-propre-gratuit-vectoriel.jpg&imgrefurl=https%3A%2F%2Ffr.vecteezy.com%2Fvecteur-libre%2Ffond-blanc&docid=cQDzhgRjQ3vEnM&tbnid=AQrn7-fr1RnVFM&vet=12ahUKEwj0zKu-3uGOAxVtT0EAHc5tBmYQM3oECB8QAA..i&w=356&h=200&hcb=2&ved=2ahUKEwj0zKu-3uGOAxVtT0EAHc5tBmYQM3oECB8QAA");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center;
+    color: white;
+    padding-top: 70px;
+
+}
+
+p {
+    font-size: 20px;
+    text-align: center;
+    color: white;
+
+}
+
+.container {
+    border-radius: 10px;
+    border: 2px solid black;
+    margin-left: 300px;
+    margin-top: 150px;
+    width: 50%;
+    height: 300px;
+    --s: 200px;
+
+
+    --c1: #1d1d1d;
+    --c2: #4e4f51;
+    --c3: #3c3c3c;
+
+    background: repeating-conic-gradient(from 30deg,
+            #0000 0 120deg,
+            var(--c3) 0 180deg) calc(0.5 * var(--s)) calc(0.5 * var(--s) * 0.577),
+        repeating-conic-gradient(from 30deg,
+            var(--c1) 0 60deg,
+            var(--c2) 0 120deg,
+            var(--c3) 0 180deg);
+
+    background-size: var(--s) calc(var(--s) * 0.577);
+}
