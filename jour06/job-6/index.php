@@ -2,30 +2,30 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Choisir un style</title>
-  <link rel="stylesheet" href="index.css">
+  <title>Choix du style</title>
+   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  <?php
+  
+    $style = 'index'; 
+    if (isset($_POST['style']) && in_array($_POST['style'], ['style1', 'style2', 'style3'])) {
+        $style = $_POST['style'];
+    }
+    
+    echo '<link rel="stylesheet" href="' . $style . '.css">';
+  ?>
 </head>
 <body>
 
-  <div>
-    <label for="style">Choisissez un style :</label><br>
-    <select id="style">
-      <option value="style1.php">Style 1</option>
-      <option value="style2.php">Style 2</option>
-      <option value="style3.php">Style 3</option>
+  <form method="post" action="">
+    <label for="style">Choisis un style :</label>
+    <select name="style" id="style">
+      <option value="style1" <?= ($style === 'style1') ? 'selected' : '' ?>>Style 1</option>
+      <option value="style2" <?= ($style === 'style2') ? 'selected' : '' ?>>Style 2</option>
+      <option value="style3" <?= ($style === 'style3') ? 'selected' : '' ?>>Style 3</option>
     </select>
-  </div>
-
-  <div class="D1">
-    <button onclick="redirect()">Valider</button>
-  </div>
-
-  <script>
-    function redirect() {
-      const selectedPage = document.getElementById("style").value;
-      window.location.href = selectedPage;
-    }
-  </script>
+    <button type="submit">Valider</button>
+  </form>
 
 </body>
 </html>

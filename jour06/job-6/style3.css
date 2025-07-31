@@ -1,0 +1,13 @@
+body {
+    background-color: #f4fff0;
+    font-family: 'Georgia', serif;
+}
+
+form {
+    background-color: #ffffff;
+    border: 2px dashed #2e8b57;
+    padding: 20px;
+    width: 300px;
+    margin: 50px auto;
+    border-radius: 8px;
+}
